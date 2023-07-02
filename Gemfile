@@ -48,3 +48,4 @@ end
 
 gem 'figaro'
 gem 'jwt', '~> 2.7'
+gem 'rails-i18n'
