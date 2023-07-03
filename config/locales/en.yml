@@ -30,4 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  mailer:
+    confirm_email:
+      subject: "Confirm your email"
+      h1: Welcome to
+      p1: You have successfully signed up
+      p2: To confirm your email, follow
+      link: this link
+      p3: Thanks for joining and have a great day!
+

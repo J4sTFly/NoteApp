@@ -1,0 +1,9 @@
+<h1><%= I18n.t('mailer.confirm_email.h1') %> NoteApp</h1>
+<p>
+  <%= I18n.t('mailer.confirm_email.p1') %> NoteApp
+</p>
+<% puts mail_confirm_users_url(locale: I18n.locale, token: @token) %>
+<p>
+  <%= I18n.t('mailer.confirm_email.p2') %> <%= link_to I18n.t('mailer.confirm_email.link'), mail_confirm_users_url(locale: I18n.locale, token: @token) %>.
+</p>
+<p><%= I18n.t('mailer.confirm_email.p3') %></p>
