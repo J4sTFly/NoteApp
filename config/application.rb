@@ -22,7 +22,7 @@ module NoteAppBackend
   class Application < Rails::Application
     config.load_defaults 7.0
 
-    config.eager_load_paths << Rails.root.join("lib")
+    config.eager_load_paths << Rails.root.join('lib')
 
     config.i18n.available_locales = [:en]
 

@@ -10,16 +10,14 @@ class UsersController < ApplicationController
   end
 
   def confirm_email
-    begin
-      user_id = JsonWebToken.decode(params[:token])[:user_id]
-      @user = User.find user_id
-      @user.confirm_email
-      @user.save
+    user_id = JsonWebToken.decode(params[:token])[:user_id]
+    @user = User.find user_id
+    @user.confirm_email
+    @user.save
 
-      render :confirm_email, status: :ok
-    rescue JWT::DecodeError, JWT::ExpiredSignature, ActiveRecord::RecordNotFound => e
-      render json: { errors: e.message }, status: :unauthorized
-    end
+    render :confirm_email, status: :ok
+  rescue JWT::DecodeError, JWT::ExpiredSignature, ActiveRecord::RecordNotFound => e
+    render json: { errors: e.message }, status: :unauthorized
   end
 
   private
